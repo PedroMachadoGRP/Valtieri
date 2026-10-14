@@ -3,6 +3,28 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+  --color-border: #334155;
+  --color-primary: #2563eb;
+  --color-primary-light: #60a5fa;
+  --color-text: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-positive: #4ade80;
+  --color-alert: #f87171;
+
+  --text-small: 14px;
+  --text-base: 16px;
+  --text-subtitle: 22px;
+  --text-title: 28px;
+
+  --radius: 8px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -19,8 +41,17 @@
   }
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-size: var(--text-base);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-2);
 }
