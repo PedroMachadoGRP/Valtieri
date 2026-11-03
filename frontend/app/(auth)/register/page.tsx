@@ -1,14 +1,12 @@
-import Button from '@/app/components/ui/Button'
-import Field from '@/app/components/ui/Field'
+import Button from "@/app/components/ui/Button";
+import Field from "@/app/components/ui/Field";
 
 export default function Page() {
   return (
     <main className="flex h-screen w-screen items-center justify-center bg-[url('/images/auth/background.jpg')] bg-cover bg-center bg-no-repeat">
       <section className="flex h-180 w-280 flex-col items-center justify-center gap-2 rounded-[15px] border border-white/15 bg-(--color-surface)/60 p-2 shadow-xl backdrop-blur-xl">
-        <h2 className="text-(length:--text-title)">
-          Página de registro
-        </h2>
-
+        <h2 className="text-(length:--text-title)">Bem vindo ao Valtieri</h2>
+        
         <form className="flex flex-col gap-2">
           <Field
             label="Nome"
@@ -41,7 +39,13 @@ export default function Page() {
             Registrar
           </Button>
         </form>
+        <p className="flex items-center justify-center gap-1 text-md">
+          Já tem uma conta?
+          <a className="text-blue-300 hover:cursor-pointer hover:text-blue-500 duration-100" href="/login">
+            login
+          </a>
+        </p>
       </section>
     </main>
-  )
+  );
 }
