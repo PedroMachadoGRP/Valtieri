@@ -11,6 +11,8 @@
     "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",
     "db:studio": "prisma studio",
+    "db:seed": "prisma db seed",
+    "db:check": "tsx src/scripts/test-db.ts",
     "postinstall": "prisma skills sync || exit 0"
   },
   "keywords": [],

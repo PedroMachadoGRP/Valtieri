@@ -1,13 +1,15 @@
 import "dotenv/config"
 import { PrismaClient } from "../generated/prisma/client";
-import { PrismaNeon } from "@prisma/adapter-neon"
+import {PrismaPg} from "@prisma/adapter-pg"
+
+
 const connectionString = process.env.DATABASE_URL
 
 if (!connectionString) {
     throw new Error("A variavel DATABASE_URL não foi definida.");
 }
 
-const adapter = new PrismaNeon({
+const adapter = new PrismaPg({
     connectionString,
 })
 
